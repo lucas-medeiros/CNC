@@ -1,0 +1,57 @@
+#region
+$Mill (Alarm if not a milling machine)
+$Millimeters
+$AddRegPart 1
+(Atividade1_2)
+#endregion
+
+T2 M6
+(Enter your CNC code here)
+G92 X0 Y0 Z0
+G0 X0 Y0 Z60 M3 S2000 F10
+G90
+X150 Y50 Z60
+Z0
+X100
+Y150
+Z60
+G90
+X0 Y100
+Z0
+X50 Y100
+X50 Y150
+Z150
+
+T1 M6
+G0 X150 Y150 Z150 M3 S10000 F20
+G90
+(G41)
+Z0
+X110 Y150
+Y60
+X150
+Y150
+X130
+Y70
+X150
+Y150
+Z150
+
+G00 X0 Y150 Z150 M3 S10000 F20
+G90
+Z0
+X0 Y110
+X40
+Y150
+X25
+Y110
+X40
+Y150
+X10
+Y110
+Z150
+X150 Y150 Z150
+
+M05 
+M30
+
